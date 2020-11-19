@@ -1,0 +1,27 @@
+<h1>List Books</h1>
+<br>
+<button class="btn btn-success" routerLink="create">Create new book</button>
+<br>
+<br>
+<h3>Hien tai dang co {{ListBooks.length}} cuon sach</h3>
+<br>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let book of ListBooks; index as i">
+            <td>{{i+1}}</td>
+            <td (click)="formDetail(book.id)">{{book.title}}</td>
+            <td>{{book.author}}</td>
+            <td><button class="btn btn-secondary" (click)="formEdit(book.id)">Edit</button></td>
+            <td><button class="btn btn-secondary" (click)="deleteBook(book.id)" routerLink="delete">Delete</button></td>
+        </tr>
+    </tbody>
+</table>

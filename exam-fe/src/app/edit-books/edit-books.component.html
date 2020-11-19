@@ -1,0 +1,26 @@
+<h1>Edit Books</h1>
+<br>
+<button class="btn btn-secondary" routerLink="/">Quay lại List Books</button>
+<br>
+<br>
+<br>
+<table class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Description</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><input [(ngModel)]="book.title"></td>
+    <td><input [(ngModel)]="book.author"></td>
+    <td><input [(ngModel)]="book.description"></td>
+    <td><button class="btn btn-secondary" (click)="updateData()">Edit</button></td>
+
+  </tr>
+  </tbody>
+</table>
+
